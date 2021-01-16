@@ -1,7 +1,7 @@
-/* // creating paginated pages programatically 
+// creating paginated pages programatically 
 
 exports.createPages = async function({actions, graphql}) {
-    const {data} = await graphql`
+    const {data} = await graphql(`
         query {
             allMdx(sort: {fields: frontmatter___date, order: DESC}) {
                 edges {
@@ -14,17 +14,17 @@ exports.createPages = async function({actions, graphql}) {
                 }
               }
         }
-    `
+    `)
 
 
     // Create paginated pages for posts through graphql
 
-    const postPerPage = 5
+    const postPerPage = 3
 
-    const numPages = Math.ceil(data.allMdx.edge.length / postPerPage); 
+    const numPages = Math.ceil(data.allMdx.edges.length / postPerPage); 
 
     Array.from({ length: numPages }).forEach((_, i) => {
-        actions.createPages({
+        actions.createPage({
             path: i === 0 ? `/`: `/${i + 1}`, 
             component: require.resolve("./src/templates/allPosts.js"),
             context: {
@@ -38,18 +38,18 @@ exports.createPages = async function({actions, graphql}) {
 
     // creating single blog posts pages
 
-    data.allMdx.edges.forEach(edge => {
+     data.allMdx.edges.forEach(edge => {
         const slug = edge.node.frontmatter.slug
         const id = edge.node.id
-        actions.createPages({
+        actions.createPage({
             path: slug,
             component: require.resolve(`./src/templates/singlePost.js`),
-            context: {id}, 
+            context: { id }, 
         })
     })
-}
+} 
 
 
 
 
-// more info at: https://www.gatsbyjs.com/docs/tutorial/part-seven/// _, is for ignoring an argument */
+// more info at: https://www.gatsbyjs.com/docs/tutorial/part-seven/// _, is for ignoring an argument 

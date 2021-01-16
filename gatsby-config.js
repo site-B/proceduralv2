@@ -50,6 +50,8 @@ module.exports = {
         fonts: [
           `Playfair Display`,
           `serif\:400,400i,600i,900`,
+          `Roboto Mono`, 
+          `monospace\: 400,500,700`,
         ],
         display: "swap",
       },

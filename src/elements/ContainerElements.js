@@ -4,7 +4,7 @@ export const ContainerWrapper = styled.div`
     height: 100%; 
     display: grid; 
     grid-template-columns: 1fr repeat(12, minmax(auto, 5rem)) 1fr;
-    grid-template-rows: 7rem 25rem auto; 
+    grid-template-rows: 7rem 25rem 6rem auto; 
     /* first row: nav; second row: first section image; third: rest. no overlaping crap*/
     gap: 0 2rem; 
 

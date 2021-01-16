@@ -1,7 +1,7 @@
 export default {
     fonts: {
         main: "Playfair Display",
-        code: "Roboto Mono, monospace",
+        code: "Roboto Mono, monospace"
     },
     colors: {
         main1: "hsl(207, 70%, 59%)",
@@ -11,6 +11,7 @@ export default {
         dark3: "hsl(227, 2%, 64%)",
         light1: "hsl(0, 0%, 97%)",
         light2: "hsl(0, 0%, 99%)",
+        blood: 'hsl(348, 83%, 47%)',
     },
     breakpoints: {
         mobile: "only screen and (max-width: 50rem)",
