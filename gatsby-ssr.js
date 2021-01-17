@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { createGlobalStyle, ThemeProvider } from 'styled-components'; 
 import { MDXProvider } from '@mdx-js/react'; 
+import { preToCodeBlock } from "mdx-utils"; 
 import Theme from "./src/themes/theme"; 
 import { Table, Code} from './src/components'; 
 import './language-tabs.css'; // from https://codesandbox.io/s/language-tabs-mdx-g03g6?file=/language-tabs.css:0-978 
