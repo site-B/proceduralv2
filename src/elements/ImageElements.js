@@ -11,3 +11,4 @@ export const FeatureImageWrapper = styled.div`
         
     }
 `
+

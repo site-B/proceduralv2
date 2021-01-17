@@ -38,6 +38,7 @@ const AllPosts = ({pageContext, data}) => {
                                 title={post.node.frontmatter.title}
                                 excerpt={post.node.frontmatter.excerpt}
                                 slug={post.node.frontmatter.slug}
+                                tags={post.node.frontmatter.tags}
                             /> 
                         </ImgCardWrapper>
 
@@ -68,6 +69,7 @@ export const pageQuery = graphql`
                     title
                     date
                     excerpt
+                    tags
                     thumbnail {
                         childImageSharp {
                           fixed(width: 500, quality: 100) {

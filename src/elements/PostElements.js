@@ -91,7 +91,6 @@ export const PostWrapper = styled.main`
     }
 
     ul, ol {
-        color: ${props => props.theme.colors.light2};
         margin: 1rem 0 1rem 2rem; 
     }
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NavWrapper = styled.nav`
-    grid-column: 2 / span 12; 
+    grid-column: 2 / span 14; 
     grid-row: 1 / 2; 
     display: flex; 
     align-items: center; 
@@ -22,7 +22,7 @@ export const NavLinksWrapper = styled.div`
     justify-content: space-between;
 
     p {
-        margin: 0 1rem; 
+        margin: 0 0 0 1rem; 
     } 
 
     h1 {

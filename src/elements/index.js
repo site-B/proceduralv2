@@ -5,6 +5,7 @@ export * from './ImageElements';
 export * from './MainImageElements'; 
 export * from './ContentElements'; 
 export * from './TypographyElements'; 
+export * from './TagsElements'; 
 export * from './CardElements';
 export * from './ButtonElements'; 
 export * from './BackButtonElements'; 
