@@ -6,6 +6,7 @@ export * from './MainImageElements';
 export * from './ContentElements'; 
 export * from './TypographyElements'; 
 export * from './TagsElements'; 
+export * from './SidebarElements'; 
 export * from './CardElements';
 export * from './ButtonElements'; 
 export * from './BackButtonElements'; 

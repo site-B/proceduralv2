@@ -29,31 +29,31 @@ export const Footer = () => {
 
     `)
     return <FooterWrapper>
-        <FooterSocialWrapper>
-            <FooterSocialIcons>
-                <a href="https://github.com/VBalaguera" target="_blank" rel="noopener noreferrer">
-                    <img src={data.github.publicURL} /> 
-                </a>
-                <a href="https://www.instagram.com/vbalaguera/" target="_blank" rel="noopener noreferrer">
-                    <img src={data.instagram.publicURL} /> 
-                </a>
-                <a href="https://www.youtube.com/channel/UCT5Xa9Qgeo-Lpc_Q4Vg3CuQ" target="_blank" rel="noopener noreferrer">
-                    <img src={data.youtube.publicURL} /> 
-                </a>
-                <a href="https://twitter.com/Balaguera" target="_blank" rel="noopener noreferrer">
-                    <img src={data.twitter.publicURL} /> 
-                </a>
-            </FooterSocialIcons>
-            <P size="small" color="light1" margin='1rem' textAlign='center'>
-            2021. Copyright all original text chunks.
-            </P>
-            <P size="small" color="light1" margin='1rem' textAlign='center'>
-                Everything else belongs to their respective owners.
-            </P>
-            <P size="small" color="light1" margin='1rem'  textAlign='center'>
-                Made in Madrid. Hosted on Heroku.
-            </P>
-        </FooterSocialWrapper>
-    </FooterWrapper>
+                <FooterSocialWrapper>
+                    <FooterSocialIcons>
+                        <a href="https://github.com/VBalaguera" target="_blank" rel="noopener noreferrer">
+                            <img src={data.github.publicURL} /> 
+                        </a>
+                        <a href="https://www.instagram.com/vbalaguera/" target="_blank" rel="noopener noreferrer">
+                            <img src={data.instagram.publicURL} /> 
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCT5Xa9Qgeo-Lpc_Q4Vg3CuQ" target="_blank" rel="noopener noreferrer">
+                            <img src={data.youtube.publicURL} /> 
+                        </a>
+                        <a href="https://twitter.com/Balaguera" target="_blank" rel="noopener noreferrer">
+                            <img src={data.twitter.publicURL} /> 
+                        </a>
+                    </FooterSocialIcons>
+                    <P size="small" color="light1" margin='1rem' textAlign='center'>
+                    2021. Copyright all original text chunks.
+                    </P>
+                    <P size="small" color="light1" margin='1rem' textAlign='center'>
+                        Everything else belongs to their respective owners.
+                    </P>
+                    <P size="small" color="light1" margin='1rem'  textAlign='center'>
+                        Made in Madrid. Hosted on Heroku.
+                    </P>
+                </FooterSocialWrapper>
+            </FooterWrapper>
 };
 

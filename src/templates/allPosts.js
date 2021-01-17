@@ -1,7 +1,7 @@
 //
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { Container, Content, ContentCard, MainImage, Pagination } from '../components';
+import { Container, Content, ContentCard, MainImage, Pagination, Sidebar } from '../components';
 
 import Img from 'gatsby-image'; 
 
@@ -44,6 +44,9 @@ const AllPosts = ({pageContext, data}) => {
 
                 ))}
             </Content>
+            <Sidebar>
+                
+            </Sidebar>
             <Pagination 
                 isFirst={isFirst}
                 isLast={isLast}

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby'; 
 
 export const PaginationWrapper = styled.div`
-    grid-column: 2 / span 12; 
+    grid-column: 2 / span 14; 
     padding: 2.5rem 0; 
     margin: auto; 
     display: flex; 
@@ -31,7 +31,7 @@ export const PaginationWrapper = styled.div`
 `;
 
 export const PaginationElement = styled(props => <Link {...props}/>)`
-    font-size: .7rem; 
+    font-size: 1rem; 
     line-height: 1.2rem;
     font-weight: 400;  
     text-decoration: none; 
@@ -45,7 +45,7 @@ export const PaginationElement = styled(props => <Link {...props}/>)`
 `
 
 export const PaginationElementDisabled = styled(props => <Link {...props}/>)`
-    font-size: .7rem; 
+    font-size: 1rem; 
     line-height: 1.2rem;
     font-weight: 400;  
     text-decoration: none; 

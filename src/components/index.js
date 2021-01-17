@@ -5,6 +5,7 @@ export * from './MainImage';
 export * from './FeatureImage'; 
 export * from './Content';
 export * from './ContentCard';
+export * from './Sidebar'; 
 export * from './Button'; 
 export * from './BackButton'; 
 export * from './Pagination'; 
