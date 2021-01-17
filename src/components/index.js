@@ -8,3 +8,5 @@ export * from './Button';
 export * from './BackButton'; 
 export * from './Pagination'; 
 export * from './Post'; 
+export * from './Table'; 
+export * from './Code'; 
