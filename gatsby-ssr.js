@@ -5,7 +5,7 @@ import { preToCodeBlock } from "mdx-utils";
 import Theme from "./src/themes/theme"; 
 import { Table, Code} from './src/components'; 
 import './language-tabs.css'; // from https://codesandbox.io/s/language-tabs-mdx-g03g6?file=/language-tabs.css:0-978 
-// additional info: https://www.christopherbiscardi.com/post/codeblocks-mdx-and-mdx-utils 
+// additional info: https://www.christopherbiscardi.com/post/codeblocks-mdx-and-mdx-utils   
 
 const GlobalStyles = createGlobalStyle`
     * {
