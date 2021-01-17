@@ -56,6 +56,18 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `procedural`,
+        short_name: `procedural`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/logo.png`, 
+      },
+    },
   ],
 }
 // could I add as many pages as needed with source-filesystem? 
