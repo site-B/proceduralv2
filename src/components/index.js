@@ -1,6 +1,7 @@
 export * from './Container'; 
 export * from './Nav'; 
 export * from './Footer';
+export * from './MainImage'; 
 export * from './FeatureImage'; 
 export * from './Content';
 export * from './ContentCard';

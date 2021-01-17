@@ -4,9 +4,11 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { H1 } from '../elements';
 import { Container, Post, FeatureImage, BackButton, Seo } from '../components';
+/* import Img from 'gatsby-image';  */
 
 const singlePost = ({ data }) => {
     const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed
+/*     const thumbnailImage = data.mdx.frontmatter.image.childImageSharp.fluid */
 
     const seoImage = data.mdx.frontmatter.featureImage.publickURL
 
@@ -17,6 +19,7 @@ const singlePost = ({ data }) => {
           image={seoImage}
           description={data.mdx.frontmatter.excerpt}
         />
+{/*             <Img fluid={thumbnailImage} /> */}
             <FeatureImage fixed={featureImage} />
             <Post>
                 <H1 margin="0 0 1.6rem 0">
@@ -40,7 +43,7 @@ const singlePost = ({ data }) => {
 
 export default singlePost; 
 
-export const pageQuery = graphql`
+export const postQuery = graphql`
     query SinglePostQuery($id: String!){
         mdx(id: {eq: $id }) {
             body
@@ -54,6 +57,13 @@ export const pageQuery = graphql`
                 childImageSharp {
                   fixed(width: 1920) {
                     ...GatsbyImageSharpFixed
+                  }
+                }
+              }
+              thumbnail {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 100) {
+                      ...GatsbyImageSharpFluid
                   }
                 }
               }

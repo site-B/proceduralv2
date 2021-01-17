@@ -12,6 +12,7 @@ export const ButtonWrapper = styled(props => <Link {...props} />)`
     width: fit-content;
     transition: filter .3s ease; 
     text-decoration: none;
+    margin-bottom: 1rem; 
 
     &:hover, 
     &:focus {

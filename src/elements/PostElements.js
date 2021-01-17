@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const PostWrapper = styled.main`
-    grid-column: 4 / span 8; 
+    grid-column: 3 / span 10; 
     grid-row: 4 / span 5; 
     background-color: ${props => props.theme.colors.dark1};
     padding: ${props => `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`}; 
     border: 1px solid ${props => props.theme.colors.light2};
     z-index: 10; 
-    margin-top: 1rem; 
+    margin-top: 2rem; 
 
     /* styles for all future exported html elements from mdx here */
 

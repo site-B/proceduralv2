@@ -1,43 +1,46 @@
 //
 import React from 'react';
-import { graphql } from 'gatsby';
-import { 
-    Container, 
-    Content, 
-    ContentCard, 
-    FeatureImage, 
-    Pagination, 
-    Seo 
-} from '../components';
+import { Link, graphql } from 'gatsby';
+import { Container, Content, ContentCard, MainImage, Pagination } from '../components';
 
-import { H1, P } from '../elements';
+import Img from 'gatsby-image'; 
+
+import { ImgCardWrapper, H1, P } from '../elements'; 
 
 const AllPosts = ({pageContext, data}) => {
     const {currentPage, numPages} = pageContext;
     const isFirst = currentPage === 1;
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? '/' : `/${currentPage - 1}`; 
-    const nextPage = `/${currentPage + 1}`
+    const prevPage = currentPage - 1 === 1 ? '/' : '/' + (currentPage - 1).toString(); 
+    const nextPage = '/' + (currentPage + 1).toString(); 
 
     const posts = data.allMdx.edges
 
     return (
         <Container>
-            <Seo />
-            <FeatureImage />
+            <MainImage />
             <Content>
                 <H1 textAlign='center' margin='0 0 1rem 0'>
-                    allPosts title here
+                    The story so far
                 </H1>
                 <P color='light2' textAlign='center'></P>
                 {posts.map( post => (
-                    <ContentCard 
-                        key={post.node.frontmatter.slug}
-                        date={post.node.frontmatter.date}
-                        title={post.node.frontmatter.title}
-                        excerpt={post.node.frontmatter.excerpt}
-                        slug={post.node.frontmatter.slug}
-                    /> 
+                        <ImgCardWrapper>
+                            <Link 
+                                to={post.node.frontmatter.slug} itemAlign='center'>
+                                <Img fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}>
+
+                                </Img>
+                            </Link>
+                            <ContentCard 
+                                key={post.node.frontmatter.slug}
+                                date={post.node.frontmatter.date}
+                                title={post.node.frontmatter.title}
+                                excerpt={post.node.frontmatter.excerpt}
+                                slug={post.node.frontmatter.slug}
+                            /> 
+                        </ImgCardWrapper>
+
                 ))}
             </Content>
             <Pagination 
@@ -59,11 +62,19 @@ export const pageQuery = graphql`
             limit: $limit) {
             edges {
               node {
+                  id
                 frontmatter {
                     slug
                     title
                     date
                     excerpt
+                    thumbnail {
+                        childImageSharp {
+                          fixed(width: 500, quality: 100) {
+                              ...GatsbyImageSharpFixed
+                          }
+                        }
+                      }
                 }
               }
             }

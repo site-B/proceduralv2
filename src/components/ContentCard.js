@@ -2,7 +2,7 @@ import React from 'react';
 import { CardWrapper, P, H2 } from '../elements';
 import { Button } from '../components'; 
 
-export const ContentCard = ({ date, title, excerpt, slug}) => {
+export const ContentCard = ({ date, title, excerpt, slug }) => {
     return (
         <CardWrapper>
             <P size="xSmall" textAlign='center' margin='0 0 .5rem 0' color='light2'>
@@ -20,3 +20,4 @@ export const ContentCard = ({ date, title, excerpt, slug}) => {
         </CardWrapper>
     )
 }
+
