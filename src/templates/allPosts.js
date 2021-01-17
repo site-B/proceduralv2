@@ -1,7 +1,14 @@
 //
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Container, Content, ContentCard, FeatureImage, Pagination } from '../components';
+import { 
+    Container, 
+    Content, 
+    ContentCard, 
+    FeatureImage, 
+    Pagination, 
+    Seo 
+} from '../components';
 
 import { H1, P } from '../elements';
 
@@ -16,6 +23,7 @@ const AllPosts = ({pageContext, data}) => {
 
     return (
         <Container>
+            <Seo />
             <FeatureImage />
             <Content>
                 <H1 textAlign='center' margin='0 0 1rem 0'>

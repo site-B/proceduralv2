@@ -44,8 +44,14 @@ export const Footer = () => {
                     <img src={data.twitter.publicURL} /> 
                 </a>
             </FooterSocialIcons>
-            <P size="small" color="light1">
-                2021. Made in Madrid. Hosted on Heroku.
+            <P size="small" color="light1" margin='1rem' textAlign='center'>
+            2021. Copyright all original text chunks.
+            </P>
+            <P size="small" color="light1" margin='1rem' textAlign='center'>
+                Everything else belongs to their respective owners.
+            </P>
+            <P size="small" color="light1" margin='1rem'  textAlign='center'>
+                Made in Madrid. Hosted on Heroku.
             </P>
         </FooterSocialWrapper>
     </FooterWrapper>

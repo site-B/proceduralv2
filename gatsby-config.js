@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title: "procedural",
+    description: "Pet project of a blog. Made with graphql, gatsby, and React. Expect many surprises.",
+    image: "/office.jpg",
+    twitterUsername: "@balaguera",
+    author: "Víctor Balaguera"
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

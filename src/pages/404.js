@@ -1,10 +1,10 @@
 import React from 'react';
 import {graphql} from 'gatsby'; 
-import {Container, Content, FeatureImage } from '../components';
+import {Container, Content, FeatureImage, BackButton } from '../components';
 import { H1, P } from '../elements';
 
 const notFound = ({data}) => {
-    const featureImage = data.imageSharp.fluid; 
+    const featureImage = data.imageSharp.fixed; 
 
     return (
         <Container>
@@ -19,9 +19,12 @@ const notFound = ({data}) => {
                 <P textAlign='center' margin='.5rem'>
                     Get back where you belong, and forget all about this.
                 </P>
-                <P textAlign='center' margin='.5rem'>
+                <P textAlign='center' margin='.5rem 0 1rem 0'>
                     Until we meet again. 
                 </P>
+                <center>
+                    <BackButton>Go back</BackButton>
+                </center>
             </Content>
         </Container>
     )
@@ -29,11 +32,11 @@ const notFound = ({data}) => {
 
 export default notFound; 
 
-export const lostAndFoundQuery = graphql`
+export const notFoundQuery = graphql`
 query notFoundQuery {
-    imageSharp(fluid: {originalName: {eq: "office.jpg"}}) {
-        fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+    imageSharp(fluid: {originalName: {eq: "404.jpg"}}) {
+        fixed(width: 1920) {
+            ...GatsbyImageSharpFixed
         }
       }
 }

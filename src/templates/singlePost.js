@@ -3,13 +3,20 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { H1 } from '../elements';
-import { Container, Post, FeatureImage, BackButton } from '../components';
+import { Container, Post, FeatureImage, BackButton, Seo } from '../components';
 
 const singlePost = ({ data }) => {
-    const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fluid
+    const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fixed
+
+    const seoImage = data.mdx.frontmatter.featureImage.publickURL
 
     return (
         <Container>
+        <Seo 
+          title={data.mdx.frontmatter.title}
+          image={seoImage}
+          description={data.mdx.frontmatter.excerpt}
+        />
             <FeatureImage fixed={featureImage} />
             <Post>
                 <H1 margin="0 0 1.6rem 0">
@@ -20,9 +27,11 @@ const singlePost = ({ data }) => {
                 </MDXRenderer>
                 <br></br>
                 <br></br>
-                <BackButton>
-                    Back to main
-                </BackButton>
+                <center>
+                  <BackButton>
+                      Back to main
+                  </BackButton>
+                </center>
             </Post>
         </Container>
 
@@ -41,9 +50,10 @@ export const pageQuery = graphql`
               slug
               title
               featureImage {
+                publicURL
                 childImageSharp {
-                  fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid
+                  fixed(width: 1920) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }
