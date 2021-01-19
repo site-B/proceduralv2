@@ -66,7 +66,7 @@ export const PostWrapper = styled.main`
 
     a {
         color: ${props => props.theme.colors.blood}; 
-        text-decoration: underline; 
+        text-decoration: none; 
     }
 
     strong {

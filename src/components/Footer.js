@@ -1,16 +1,16 @@
 import React from 'react';
-import {useStaticQuery, graphql } from 'gatsby'; 
+/* import {useStaticQuery, graphql } from 'gatsby';  */
 import { 
     FooterWrapper, 
     FooterSocialWrapper, 
-    FooterSocialIcons,
+    /* FooterSocialIcons, */
     P
  } from '../elements';
 
 
 export const Footer = () => {
 
-    const data = useStaticQuery(graphql`
+/*     const data = useStaticQuery(graphql`
     
         query {
             github: file(relativePath: {eq: "github.svg"}) {
@@ -27,9 +27,25 @@ export const Footer = () => {
             }
         }
 
-    `)
+    `) */
     return <FooterWrapper>
                 <FooterSocialWrapper>
+
+                    <P size="small" color="light1" margin='1rem' textAlign='center'>
+                    Copyright © 2021 all original text chunks and miscellaneous shenanigans.
+                    </P>
+                    <P size="small" color="light1" margin='1rem' textAlign='center'>
+                        Everything else belongs to their respective owners.
+                    </P>
+                    <P size="small" color="light1" margin='1rem'  textAlign='center'>
+                        Made in Madrid.
+                    </P>
+                </FooterSocialWrapper>
+            </FooterWrapper>
+};
+
+/* DISCARDED: 
+
                     <FooterSocialIcons>
                         <a href="https://github.com/VBalaguera" target="_blank" rel="noopener noreferrer">
                             <img src={data.github.publicURL} /> 
@@ -44,16 +60,4 @@ export const Footer = () => {
                             <img src={data.twitter.publicURL} /> 
                         </a>
                     </FooterSocialIcons>
-                    <P size="small" color="light1" margin='1rem' textAlign='center'>
-                    2021. Copyright all original text chunks.
-                    </P>
-                    <P size="small" color="light1" margin='1rem' textAlign='center'>
-                        Everything else belongs to their respective owners.
-                    </P>
-                    <P size="small" color="light1" margin='1rem'  textAlign='center'>
-                        Made in Madrid. Hosted on Heroku.
-                    </P>
-                </FooterSocialWrapper>
-            </FooterWrapper>
-};
-
+                    */

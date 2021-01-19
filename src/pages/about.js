@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby'; 
-import {Container, Content, FeatureImage, BackButton } from '../components';
+import {Container, AboutContent, FeatureImage, BackButton } from '../components';
 import { H1, P } from '../elements';
 
 const aboutThis = ({data}) => {
@@ -9,7 +9,7 @@ const aboutThis = ({data}) => {
     return (
         <Container>
             <FeatureImage fixed={featureImage} />
-            <Content>
+            <AboutContent>
                 <H1 textAlign='center' margin='1rem'>
                     About this place
                 </H1>
@@ -28,7 +28,8 @@ const aboutThis = ({data}) => {
                 <center>
                     <BackButton>Go back</BackButton>
                 </center>
-            </Content>
+                <br></br>
+            </AboutContent>
     </Container>
     )
 }

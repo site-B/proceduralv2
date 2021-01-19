@@ -20,6 +20,7 @@ const AllPosts = ({pageContext, data}) => {
         <Container>
             <MainImage />
             <Content>
+            <br></br>
                 <H1 textAlign='center' margin='0 0 1rem 0'>
                     The story so far
                 </H1>
@@ -39,6 +40,7 @@ const AllPosts = ({pageContext, data}) => {
                                 excerpt={post.node.frontmatter.excerpt}
                                 slug={post.node.frontmatter.slug}
                                 tags={post.node.frontmatter.tags}
+                                fluid={post.node.frontmatter.thumbnail.childImageSharp.fluid}
                             /> 
                         </ImgCardWrapper>
 
@@ -74,12 +76,12 @@ export const pageQuery = graphql`
                     excerpt
                     tags
                     thumbnail {
-                        childImageSharp {
-                          fixed(width: 500, quality: 100) {
-                              ...GatsbyImageSharpFixed
-                          }
+                        childImageSharp{
+                            fluid(maxWidth: 900){
+                                ...GatsbyImageSharpFluid
+                            }
                         }
-                      }
+                    }
                 }
               }
             }

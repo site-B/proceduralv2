@@ -14,8 +14,10 @@ export default {
         blood: 'hsl(348, 83%, 47%)',
     },
     breakpoints: {
-        mobile: "only screen and (max-width: 50rem)",
-        tablet: "only screen and (max-width: 65rem)",
+        mobile: "only screen and (max-width: 500px)",
+        tablet: "only screen and (max-width: 768px)",
+        imgFix: "only screen and (max-width: 624px)",
+        laptop: "only screen and (max-width: 1300px)"
     },
     spacings: {
         xxSmall: ".25rem",

@@ -29,3 +29,9 @@ export const NavLinksWrapper = styled.div`
         margin: 0 1rem; 
     }
 `
+
+export const NavLink = styled.a`
+    color: crimson; 
+    text-decoration: none;
+    margin: 0 0 0 1rem; 
+`

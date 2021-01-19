@@ -4,9 +4,10 @@ import { Link } from 'gatsby';
 
 export const ButtonWrapper = styled(props => <Link {...props} />)`
     padding: .5rem .75rem;
-    background-color: crimson;
+    background-color: ${props => props.theme.colors.dark1};
     border-radius: .5rem; 
-    color: ${props => props.theme.colors.dark1};
+    border: 1px solid crimson; 
+    color: crimson; 
     font-weight: 600; 
     font-size: .9rem;
     width: fit-content;

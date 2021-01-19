@@ -6,7 +6,7 @@ export const Pagination = ({isFirst, isLast, prevPage, nextPage}) => {
         <PaginationWrapper isFirst={isFirst} isLast={isLast}>
             {
                 isFirst ? (
-                    <PaginationElementDisabled disabled href='/' display='none'>This is the first page</PaginationElementDisabled>
+                    <PaginationElementDisabled disabled display='none'>This is the first page</PaginationElementDisabled>
                 ) : (
                     <PaginationElement to={prevPage}>Previous Page</PaginationElement>
                 )
